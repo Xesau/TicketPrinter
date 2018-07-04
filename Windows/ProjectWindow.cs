@@ -838,10 +838,5 @@ namespace TicketPrinter.Windows
             UpdateSaveButton();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(ManualControlWindow.formatOutput(this.connection.ReadExisting()));
-        }
-
     }
 }

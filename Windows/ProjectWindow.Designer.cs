@@ -124,7 +124,6 @@
             this.btnAddTicket = new System.Windows.Forms.Button();
             this.tKeepConnection = new System.Windows.Forms.Timer(this.components);
             this.tWrongDeviceType = new System.Windows.Forms.Timer(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.pnlSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudNewTicketNumber)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMagazine)).BeginInit();
@@ -178,7 +177,6 @@
             // 
             // pnlSidebar
             // 
-            this.pnlSidebar.Controls.Add(this.button1);
             this.pnlSidebar.Controls.Add(this.btnReinitialise);
             this.pnlSidebar.Controls.Add(this.lblNextTicketNumber);
             this.pnlSidebar.Controls.Add(this.nudNewTicketNumber);
@@ -218,7 +216,7 @@
             this.lblNextTicketNumber.AutoSize = true;
             this.lblNextTicketNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNextTicketNumber.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblNextTicketNumber.Location = new System.Drawing.Point(13, 314);
+            this.lblNextTicketNumber.Location = new System.Drawing.Point(13, 301);
             this.lblNextTicketNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNextTicketNumber.Name = "lblNextTicketNumber";
             this.lblNextTicketNumber.Size = new System.Drawing.Size(145, 20);
@@ -228,7 +226,7 @@
             // nudNewTicketNumber
             // 
             this.nudNewTicketNumber.Enabled = false;
-            this.nudNewTicketNumber.Location = new System.Drawing.Point(12, 337);
+            this.nudNewTicketNumber.Location = new System.Drawing.Point(12, 324);
             this.nudNewTicketNumber.Maximum = new decimal(new int[] {
             999999,
             0,
@@ -1297,17 +1295,6 @@
             this.tWrongDeviceType.Interval = 5000;
             this.tWrongDeviceType.Tick += new System.EventHandler(this.tWrongDeviceType_Tick);
             // 
-            // button1
-            // 
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(12, 296);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(210, 22);
-            this.button1.TabIndex = 61;
-            this.button1.Text = "Readmsg";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // ProjectWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1463,6 +1450,5 @@
         private System.Windows.Forms.Label lblTopLeftCoords;
         private System.Windows.Forms.Button btnReinitialise;
         private System.Windows.Forms.Button btnCustomCommand;
-        private System.Windows.Forms.Button button1;
     }
 }

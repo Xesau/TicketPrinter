@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F1100DA4-7BF6-4031-8DBC-A2160E0C8249}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TicketPrinter</RootNamespace>
+    <AssemblyName>TicketPrinter</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\..\..\..\..\Desktop\Software\APIs\NET\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\..\Desktop\Software\APIs\NET\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ByteSequence.cs" />
+    <Compile Include="Project.cs" />
+    <Compile Include="Ticket.cs" />
+    <Compile Include="TicketItems\BorderItem.cs" />
+    <Compile Include="TicketItems\CustomCommandItem.cs" />
+    <Compile Include="TicketItems\DateItem.cs" />
+    <Compile Include="TicketItems\LineItem.cs" />
+    <Compile Include="TicketItems\TicketNumberItem.cs" />
+    <Compile Include="TicketItems\TextItem.cs" />
+    <Compile Include="TicketItems\TicketItem.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="Windows\RenameTicketDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\RenameTicketDialog.Designer.cs">
+      <DependentUpon>RenameTicketDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\NewTicketDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\NewTicketDialog.Designer.cs">
+      <DependentUpon>NewTicketDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\PrinterNotConnectedDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\PrinterNotConnectedDialog.Designer.cs">
+      <DependentUpon>PrinterNotConnectedDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ConnectionClosedDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\ConnectionClosedDialog.Designer.cs">
+      <DependentUpon>ConnectionClosedDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ManualControlWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\ManualControlWindow.Designer.cs">
+      <DependentUpon>ManualControlWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Windows\ConnectionSetupDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\ConnectionSetupDialog.Designer.cs">
+      <DependentUpon>ConnectionSetupDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\PrintTicketsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\PrintTicketsDialog.Designer.cs">
+      <DependentUpon>PrintTicketsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\NewProjectDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\NewProjectDialog.Designer.cs">
+      <DependentUpon>NewProjectDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ProjectWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\ProjectWindow.Designer.cs">
+      <DependentUpon>ProjectWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\StartupWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\StartupWindow.Designer.cs">
+      <DependentUpon>StartupWindow.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Windows\RenameTicketDialog.resx">
+      <DependentUpon>RenameTicketDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\NewTicketDialog.resx">
+      <DependentUpon>NewTicketDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\PrinterNotConnectedDialog.resx">
+      <DependentUpon>PrinterNotConnectedDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\ConnectionClosedDialog.resx">
+      <DependentUpon>ConnectionClosedDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\ManualControlWindow.resx">
+      <DependentUpon>ManualControlWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Windows\ConnectionSetupDialog.resx">
+      <DependentUpon>ConnectionSetupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\PrintTicketsDialog.resx">
+      <DependentUpon>PrintTicketsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\NewProjectDialog.resx">
+      <DependentUpon>NewProjectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\ProjectWindow.resx">
+      <DependentUpon>ProjectWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\StartupWindow.resx">
+      <DependentUpon>StartupWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo.ico" />
+    <None Include="Resources\copy.png" />
+    <None Include="Resources\rename_large.png" />
+    <None Include="Resources\rename.png" />
+    <None Include="Resources\new_folder_large.png" />
+    <None Include="Resources\ticket_editor.png" />
+    <None Include="Resources\ticket_editor1.png" />
+    <None Include="Resources\calendar.png" />
+    <None Include="Resources\numbers.png" />
+    <None Include="Resources\image.png" />
+    <None Include="Resources\line.png" />
+    <None Include="Resources\border.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\print_large.png" />
+    <None Include="Resources\print.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\connection.png" />
+    <None Include="Resources\refresh_small.png" />
+    <None Include="Resources\refresh.png" />
+    <None Include="Resources\status_ok.png" />
+    <None Include="Resources\status_error.png" />
+    <None Include="Resources\exit.png" />
+    <None Include="Resources\new_file_large.png" />
+    <None Include="Resources\information_large.png" />
+    <None Include="Resources\error_large.png" />
+    <None Include="Resources\alert_large.png" />
+    <None Include="Resources\error.png" />
+    <None Include="Resources\error-large.png" />
+    <None Include="Resources\document-large.png" />
+    <None Include="Resources\users.png" />
+    <None Include="Resources\up.png" />
+    <None Include="Resources\trash.png" />
+    <None Include="Resources\text.png" />
+    <None Include="Resources\settings.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\money.png" />
+    <None Include="Resources\information.png" />
+    <None Include="Resources\forward.png" />
+    <None Include="Resources\down.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\configure.png" />
+    <None Include="Resources\barcode.png" />
+    <None Include="Resources\back.png" />
+    <None Include="Resources\alert.png" />
+    <None Include="Resources\accept.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
